@@ -1,0 +1,26 @@
+{
+  "$schema": "https://schema.railpack.com",
+  "provider": "node",
+  "buildAptPackages": [
+    "python3",
+    "make",
+    "g++",
+    "gcc",
+    "libpng-dev",
+    "libjpeg-dev",
+    "libcairo2-dev",
+    "libgif-dev",
+    "libpango1.0-dev",
+    "libpixman-1-dev",
+    "libglib2.0-dev",
+    "libffi-dev",
+    "libcairo2-dev",
+    "libopus-dev",
+    "libvpx-dev",
+    "pkg-config"
+  ],
+  "buildCommand": "bun install --ignore-scripts && pnpm install --frozen-lockfile --ignore-scripts --legacy-peer-deps && pnpm build",
+  "deploy": {
+    "startCommand": "pnpm start --character=\"packages/agent/src/mckenna_spore.json\""
+  }
+}
