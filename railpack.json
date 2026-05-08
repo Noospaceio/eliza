@@ -14,12 +14,12 @@
     "libpixman-1-dev",
     "libglib2.0-dev",
     "libffi-dev",
-    "libcairo2-dev",
     "libopus-dev",
     "libvpx-dev",
     "pkg-config"
   ],
-  "buildCommand": "bun install --ignore-scripts && pnpm install --frozen-lockfile --ignore-scripts --legacy-peer-deps && pnpm build",
+  "installCommand": "pnpm install --no-frozen-lockfile --ignore-scripts --legacy-peer-deps",
+  "buildCommand": "pnpm build",
   "deploy": {
     "startCommand": "pnpm start --character=\"packages/agent/src/mckenna_spore.json\""
   }
